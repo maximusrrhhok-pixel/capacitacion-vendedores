@@ -19,8 +19,8 @@
     --green3:   #14a035;
     --greenglow: rgba(57,231,95,0.14);
     --text:     #dfe5e8;
-    --text2:    #8a9298;
-    --text3:    #50585c;
+    --text2:    #c8d0d4;
+    --text3:    #8a9aa0;
     --white:    #ffffff;
     --blue:     #2a7fff;
     --yellow:   #f5a623;
@@ -32,7 +32,7 @@
     background: var(--bg);
     color: var(--text);
     font-family: 'Inter', sans-serif;
-    font-size: 13.5px;
+    font-size: 14.5px;
     line-height: 1.65;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
@@ -252,8 +252,10 @@
   .gama-visual { display:flex; flex-direction:column; gap:8px; margin:13px 0; }
   .gama-row { display:flex; align-items:center; gap:10px; }
   .gama-label { font-family:'Rajdhani',sans-serif; font-size:11.5px; font-weight:700; color:var(--text2); width:65px; flex-shrink:0; }
-  .gama-bar-wrap { flex:1; height:25px; background:var(--surface); border:1px solid var(--border); border-radius:5px; overflow:hidden; }
-  .gama-bar { height:100%; display:flex; align-items:center; padding:0 10px; font-size:10.5px; color:rgba(255,255,255,0.85); font-weight:500; }
+  .gama-bar-wrap { flex:1; height:25px; background:var(--surface); border:1px solid var(--border); border-radius:5px; overflow:hidden; position:relative; }
+  .gama-bar { height:100%; display:flex; align-items:center; padding:0 10px; font-size:10.5px; color:#ffffff; font-weight:600; white-space:nowrap; position:relative; z-index:2; width:100% !important; background:none !important; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
+  .gama-bar::before { content:''; position:absolute; top:0; left:0; height:100%; width:var(--bar-w, 25%); background:var(--bar-bg, #1a2224); z-index:0; border-radius:4px; }
+  .gama-bar span { position:relative; z-index:2; }
   .gama-note { font-size:10px; color:var(--text3); width:70px; text-align:right; flex-shrink:0; }
 
   /* psu */
@@ -466,8 +468,8 @@
     </div>
   </div>
   <div class="cover-footer">
-    <div class="cf-text">GRUPO <span class="g">MAXIMUS</span> S.R.L. · USO INTERNO</div>
-    <div class="cf-text">maximus.com.ar</div>
+    <div class="cf-text">GRUPO <span class="g">MAXIMUS</span> S.R.L. · USO INTERNO · RRHH L.C</div>
+    <div class="cf-text"><a href="https://www.maximus.com.ar" target="_blank" style="color:var(--green);text-decoration:none;letter-spacing:1.5px;">maximus.com.ar</a></div>
     <div class="cf-text">VERSIÓN 2026</div>
   </div>
 </div>
@@ -513,8 +515,8 @@
     <p>Una computadora es un sistema de piezas que trabajan juntas. No alcanza con tener buenas partes si no son compatibles entre sí. El asesoramiento correcto implica entender el ecosistema completo.</p>
 
     <div class="pc-diagram">
-      <div class="pc-part"><span class="pc-part-icon"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="8" width="14" height="14" rx="1.5" fill="#0a1a0b" stroke="#39e75f" stroke-width="1.4"/><rect x="10.5" y="10.5" width="9" height="9" rx="1" fill="none" stroke="rgba(57,231,95,0.4)" stroke-width="0.9"/><line x1="11" y1="5" x2="11" y2="8" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="15" y1="5" x2="15" y2="8" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="19" y1="5" x2="19" y2="8" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="11" y1="22" x2="11" y2="25" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="15" y1="22" x2="15" y2="25" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="19" y1="22" x2="19" y2="25" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="5" y1="11" x2="8" y2="11" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="5" y1="15" x2="8" y2="15" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="5" y1="19" x2="8" y2="19" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="22" y1="11" x2="25" y2="11" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="22" y1="15" x2="25" y2="15" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="22" y1="19" x2="25" y2="19" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><text x="15" y="16.5" text-anchor="middle" font-size="5" fill="#39e75f" font-family="monospace" font-weight="bold">CPU</text></svg></span><div class="pc-part-name">CPU</div><div class="pc-part-desc">El "cerebro". Procesa todas las instrucciones del sistema.</div></div>
-      <div class="pc-part"><span class="pc-part-icon"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="8" width="22" height="14" rx="1.5" fill="#0a1a0b" stroke="#39e75f" stroke-width="1.4"/><rect x="6" y="10.5" width="3" height="9" rx="0.5" fill="rgba(57,231,95,0.15)" stroke="rgba(57,231,95,0.5)" stroke-width="0.8"/><rect x="10.5" y="10.5" width="3" height="9" rx="0.5" fill="rgba(57,231,95,0.15)" stroke="rgba(57,231,95,0.5)" stroke-width="0.8"/><rect x="15" y="10.5" width="3" height="9" rx="0.5" fill="rgba(57,231,95,0.15)" stroke="rgba(57,231,95,0.5)" stroke-width="0.8"/><rect x="19.5" y="10.5" width="3" height="9" rx="0.5" fill="rgba(57,231,95,0.15)" stroke="rgba(57,231,95,0.5)" stroke-width="0.8"/><line x1="4" y1="14" x2="26" y2="14" stroke="#39e75f" stroke-width="0.7" stroke-dasharray="1.5 1.5"/><line x1="8" y1="8" x2="8" y2="5" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/><line x1="12" y1="8" x2="12" y2="5" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/><line x1="16" y1="8" x2="16" y2="5" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/><line x1="20" y1="8" x2="20" y2="5" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/><line x1="8" y1="22" x2="8" y2="25" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/><line x1="12" y1="22" x2="12" y2="25" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/><line x1="16" y1="22" x2="16" y2="25" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/><line x1="20" y1="22" x2="20" y2="25" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/></svg></span><div class="pc-part-name">RAM</div><div class="pc-part-desc">Memoria de trabajo temporal. Más RAM = más programas abiertos.</div></div>
+      <div class="pc-part"><span class="pc-part-icon"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="8" width="14" height="14" rx="1.5" fill="#0a1a0b" stroke="#39e75f" stroke-width="1.4"/><rect x="10.5" y="10.5" width="9" height="9" rx="1" fill="none" stroke="rgba(57,231,95,0.4)" stroke-width="0.9"/><line x1="11" y1="5" x2="11" y2="8" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="15" y1="5" x2="15" y2="8" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="19" y1="5" x2="19" y2="8" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="11" y1="22" x2="11" y2="25" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="15" y1="22" x2="15" y2="25" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="19" y1="22" x2="19" y2="25" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="5" y1="11" x2="8" y2="11" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="5" y1="15" x2="8" y2="15" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="5" y1="19" x2="8" y2="19" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="22" y1="11" x2="25" y2="11" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="22" y1="15" x2="25" y2="15" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><line x1="22" y1="19" x2="25" y2="19" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/><text x="15" y="16.5" text-anchor="middle" font-size="5" fill="#39e75f" font-family="monospace" font-weight="bold">CPU</text></svg></span><div class="pc-part-name">CPU</div><div class="pc-part-desc">El procesador es la unidad central de cómputo. Ejecuta todas las instrucciones del sistema y determina la velocidad de respuesta ante cada tarea. A mayor frecuencia y núcleos, mayor rendimiento general.</div></div>
+      <div class="pc-part"><span class="pc-part-icon"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="8" width="22" height="14" rx="1.5" fill="#0a1a0b" stroke="#39e75f" stroke-width="1.4"/><rect x="6" y="10.5" width="3" height="9" rx="0.5" fill="rgba(57,231,95,0.15)" stroke="rgba(57,231,95,0.5)" stroke-width="0.8"/><rect x="10.5" y="10.5" width="3" height="9" rx="0.5" fill="rgba(57,231,95,0.15)" stroke="rgba(57,231,95,0.5)" stroke-width="0.8"/><rect x="15" y="10.5" width="3" height="9" rx="0.5" fill="rgba(57,231,95,0.15)" stroke="rgba(57,231,95,0.5)" stroke-width="0.8"/><rect x="19.5" y="10.5" width="3" height="9" rx="0.5" fill="rgba(57,231,95,0.15)" stroke="rgba(57,231,95,0.5)" stroke-width="0.8"/><line x1="4" y1="14" x2="26" y2="14" stroke="#39e75f" stroke-width="0.7" stroke-dasharray="1.5 1.5"/><line x1="8" y1="8" x2="8" y2="5" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/><line x1="12" y1="8" x2="12" y2="5" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/><line x1="16" y1="8" x2="16" y2="5" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/><line x1="20" y1="8" x2="20" y2="5" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/><line x1="8" y1="22" x2="8" y2="25" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/><line x1="12" y1="22" x2="12" y2="25" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/><line x1="16" y1="22" x2="16" y2="25" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/><line x1="20" y1="22" x2="20" y2="25" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/></svg></span><div class="pc-part-name">RAM</div><div class="pc-part-desc">La RAM es una memoria volátil: no almacena datos de forma permanente, sino que retiene temporalmente la información que el sistema está usando en ese momento. A mayor capacidad, más tareas simultáneas sin pérdida de rendimiento.</div></div>
       <div class="pc-part"><span class="pc-part-icon"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect x="1" y="8" width="24" height="14" rx="1.5" fill="#0a1a0b" stroke="#39e75f" stroke-width="1.4"/>
   <circle cx="9" cy="15" r="5" fill="none" stroke="#39e75f" stroke-width="1.1"/>
@@ -532,7 +534,7 @@
   <line x1="4" y1="22" x2="4" y2="26" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/>
   <line x1="8" y1="22" x2="8" y2="26" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/>
   <line x1="12" y1="22" x2="12" y2="26" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/>
-</svg></span><div class="pc-part-name">GPU</div><div class="pc-part-desc">Placa de video. Clave para gaming, diseño y video.</div></div>
+</svg></span><div class="pc-part-name">GPU</div><div class="pc-part-desc">La GPU es el procesador encargado de generar y procesar las imágenes. Cuenta con su propia memoria dedicada (VRAM) y trabaja de forma independiente al CPU, lo que permite ejecutar juegos, renderizados y aplicaciones gráficas con fluidez.</div></div>
       <div class="pc-part"><span class="pc-part-icon"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect x="3" y="6" width="24" height="18" rx="2" fill="#0a1a0b" stroke="#39e75f" stroke-width="1.4"/>
   <circle cx="15" cy="15" r="6.5" fill="none" stroke="rgba(57,231,95,0.4)" stroke-width="1"/>
@@ -541,7 +543,7 @@
   <line x1="20" y1="10" x2="22" y2="8" stroke="rgba(57,231,95,0.4)" stroke-width="0.9"/>
   <rect x="5" y="9" width="4" height="2" rx="0.5" fill="rgba(57,231,95,0.3)"/>
   <rect x="5" y="12" width="4" height="1.5" rx="0.5" fill="rgba(57,231,95,0.2)"/>
-</svg></span><div class="pc-part-name">SSD / HDD</div><div class="pc-part-desc">Almacenamiento permanente: sistema, juegos, archivos.</div></div>
+</svg></span><div class="pc-part-name">SSD / HDD</div><div class="pc-part-desc">El almacenamiento es donde reside el sistema operativo, los programas y los archivos del usuario de forma permanente. A diferencia de la RAM, no se borra al apagar el equipo. El SSD ofrece velocidades de lectura y escritura muy superiores al HDD convencional.</div></div>
       <div class="pc-part"><span class="pc-part-icon"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect x="2" y="2" width="26" height="26" rx="1.5" fill="#0a1a0b" stroke="#39e75f" stroke-width="1.4"/>
   <rect x="5" y="5" width="8" height="8" rx="1" fill="none" stroke="#39e75f" stroke-width="1.1"/>
@@ -554,7 +556,7 @@
   <rect x="19" y="21" width="4" height="5" rx="0.5" fill="none" stroke="rgba(57,231,95,0.4)" stroke-width="0.9"/>
   <line x1="5" y1="14" x2="25" y2="14" stroke="rgba(57,231,95,0.2)" stroke-width="0.6"/>
   <line x1="14" y1="5" x2="14" y2="13" stroke="rgba(57,231,95,0.2)" stroke-width="0.6"/>
-</svg></span><div class="pc-part-name">MOTHERBOARD</div><div class="pc-part-desc">La placa madre une y comunica todos los componentes.</div></div>
+</svg></span><div class="pc-part-name">MOTHERBOARD</div><div class="pc-part-desc">La motherboard es la placa base que genera las conexiones necesarias entre todos los componentes del sistema. Regula la comunicación entre el procesador, la memoria, el almacenamiento y los periféricos, y determina la compatibilidad del build completo.</div></div>
       <div class="pc-part"><span class="pc-part-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect x="2" y="6" width="24" height="16" rx="2" fill="#0f1a10" stroke="#39e75f" stroke-width="1.5"/>
   <rect x="5" y="9" width="8" height="10" rx="1" fill="none" stroke="rgba(57,231,95,0.4)" stroke-width="1"/>
@@ -566,7 +568,7 @@
   <rect x="19" y="8" width="4" height="1.5" rx="0.5" fill="rgba(57,231,95,0.5)"/>
   <rect x="19" y="11" width="4" height="1.5" rx="0.5" fill="rgba(57,231,95,0.3)"/>
   <path d="M 8 3 L 8 6 M 12 3 L 12 6 M 16 3 L 16 6 M 20 3 L 20 6" stroke="rgba(57,231,95,0.4)" stroke-width="1.2" stroke-linecap="round"/>
-</svg></span><div class="pc-part-name">FUENTE (PSU)</div><div class="pc-part-desc">Alimenta todo el sistema. Su calidad afecta la estabilidad.</div></div>
+</svg></span><div class="pc-part-name">FUENTE (PSU)</div><div class="pc-part-desc">La fuente de alimentación convierte la corriente alterna de la red eléctrica en corriente continua estable para cada componente. Su calidad es crítica: una fuente sin certificación puede generar picos de voltaje que dañan la placa madre, el CPU o la GPU.</div></div>
       <div class="pc-part"><span class="pc-part-icon"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
   <line x1="15" y1="2" x2="15" y2="28" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/>
   <line x1="2" y1="15" x2="28" y2="15" stroke="#39e75f" stroke-width="1.3" stroke-linecap="round"/>
@@ -578,7 +580,7 @@
   <circle cx="15" cy="26" r="1.2" fill="rgba(57,231,95,0.4)"/>
   <circle cx="4" cy="15" r="1.2" fill="rgba(57,231,95,0.4)"/>
   <circle cx="26" cy="15" r="1.2" fill="rgba(57,231,95,0.4)"/>
-</svg></span><div class="pc-part-name">COOLING</div><div class="pc-part-desc">Mantiene la temperatura controlada bajo carga.</div></div>
+</svg></span><div class="pc-part-name">COOLING</div><div class="pc-part-desc">El sistema de cooling es el encargado de disipar el calor generado por el procesador y la GPU durante el uso. Sin una refrigeración adecuada, los componentes reducen su rendimiento automáticamente para protegerse del sobrecalentamiento.</div></div>
       <div class="pc-part"><span class="pc-part-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect x="6" y="2" width="13" height="24" rx="2" fill="#0f1a10" stroke="#39e75f" stroke-width="1.5"/>
   <rect x="8" y="4" width="9" height="5" rx="1" fill="none" stroke="rgba(57,231,95,0.5)" stroke-width="1"/>
@@ -589,7 +591,7 @@
   <line x1="19.5" y1="4" x2="19.5" y2="8" stroke="rgba(57,231,95,0.4)" stroke-width="1" stroke-linecap="round"/>
   <line x1="22.5" y1="4" x2="22.5" y2="8" stroke="rgba(57,231,95,0.4)" stroke-width="1" stroke-linecap="round"/>
   <path d="M9 9.5 H17" stroke="rgba(57,231,95,0.2)" stroke-width="0.8"/>
-</svg></span><div class="pc-part-name">GABINETE</div><div class="pc-part-desc">Contiene todo. Afecta flujo de aire y estética.</div></div>
+</svg></span><div class="pc-part-name">GABINETE</div><div class="pc-part-desc">El gabinete aloja y protege físicamente todos los componentes del sistema. Su diseño determina el flujo de aire interno, la compatibilidad con el tamaño de la placa madre y la capacidad de instalar sistemas de refrigeración adicionales.</div></div>
     </div>
 
     <h2>Cómo identificar las necesidades del cliente</h2>
@@ -611,7 +613,7 @@
     </div>
   </div>
   <div class="page-footer">
-    <div class="pf-text">GRUPO <span class="g">MAXIMUS</span> · CAPACITACIÓN INTERNA</div>
+    <div class="pf-text">GRUPO <span class="g">MAXIMUS</span> · CAPACITACIÓN INTERNA · RRHH L.C</div>
     <div class="pf-text">02</div>
   </div>
 </div>
@@ -702,7 +704,7 @@
     </div>
   </div>
   <div class="page-footer">
-    <div class="pf-text">GRUPO <span class="g">MAXIMUS</span> · CAPACITACIÓN INTERNA</div>
+    <div class="pf-text">GRUPO <span class="g">MAXIMUS</span> · CAPACITACIÓN INTERNA · RRHH L.C</div>
     <div class="pf-text">03</div>
   </div>
 </div>
@@ -724,12 +726,12 @@
     <h2>RAM vs Almacenamiento — diferencia clave</h2>
     <div class="card-grid card-grid-2">
       <div class="card card-blue">
-        <div class="card-title">💾 RAM — Memoria de trabajo</div>
-        <p>Es temporal. Guarda lo que estás usando ahora mismo. Al apagar la PC, se borra todo. <strong style="color:var(--text)">Más RAM = más aplicaciones abiertas sin lentitud.</strong></p>
+        <div class="card-title"><svg width="16" height="16" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;margin-right:6px;"><rect x="4" y="8" width="22" height="14" rx="1.5" fill="#0a1a0b" stroke="#39e75f" stroke-width="1.4"/><rect x="6" y="10.5" width="3" height="9" rx="0.5" fill="rgba(57,231,95,0.15)" stroke="rgba(57,231,95,0.5)" stroke-width="0.8"/><rect x="10.5" y="10.5" width="3" height="9" rx="0.5" fill="rgba(57,231,95,0.15)" stroke="rgba(57,231,95,0.5)" stroke-width="0.8"/><rect x="15" y="10.5" width="3" height="9" rx="0.5" fill="rgba(57,231,95,0.15)" stroke="rgba(57,231,95,0.5)" stroke-width="0.8"/><rect x="19.5" y="10.5" width="3" height="9" rx="0.5" fill="rgba(57,231,95,0.15)" stroke="rgba(57,231,95,0.5)" stroke-width="0.8"/><line x1="4" y1="14" x2="26" y2="14" stroke="#39e75f" stroke-width="0.7" stroke-dasharray="1.5 1.5"/><line x1="8" y1="8" x2="8" y2="5" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/><line x1="12" y1="8" x2="12" y2="5" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/><line x1="16" y1="8" x2="16" y2="5" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/><line x1="20" y1="8" x2="20" y2="5" stroke="#39e75f" stroke-width="1.2" stroke-linecap="round"/></svg> RAM — Memoria de trabajo</div>
+        <p>La RAM es una memoria volátil de acceso ultrarrápido: retiene temporalmente los datos que el sistema está procesando en ese instante, pero los pierde al apagar el equipo. Su capacidad determina cuántas tareas puede manejar el sistema de forma simultánea sin degradar el rendimiento. A mayor frecuencia (MHz) y capacidad (GB), mayor fluidez en multitarea, edición y gaming. <strong style="color:var(--text)">No es almacenamiento: es el espacio de trabajo activo del sistema.</strong></p>
       </div>
       <div class="card card-dim">
-        <div class="card-title">🗄️ Almacenamiento (SSD/HDD)</div>
-        <p>Es permanente. Guarda el sistema operativo, archivos, juegos y programas. <strong style="color:var(--text)">La RAM no reemplaza al almacenamiento, son complementarios.</strong></p>
+        <div class="card-title"><svg width="16" height="16" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;margin-right:6px;"><rect x="3" y="6" width="24" height="18" rx="2" fill="#0a1a0b" stroke="#39e75f" stroke-width="1.4"/><circle cx="15" cy="15" r="6.5" fill="none" stroke="rgba(57,231,95,0.4)" stroke-width="1"/><circle cx="15" cy="15" r="3.5" fill="none" stroke="rgba(57,231,95,0.3)" stroke-width="0.8"/><circle cx="15" cy="15" r="1.2" fill="#39e75f" opacity="0.6"/><line x1="20" y1="10" x2="22" y2="8" stroke="rgba(57,231,95,0.4)" stroke-width="0.9"/><rect x="5" y="9" width="4" height="2" rx="0.5" fill="rgba(57,231,95,0.3)"/><rect x="5" y="12" width="4" height="1.5" rx="0.5" fill="rgba(57,231,95,0.2)"/></svg> Almacenamiento (SSD/HDD)</div>
+        <p>El almacenamiento es no volátil: conserva el sistema operativo, aplicaciones y archivos del usuario de forma permanente, independientemente del estado del equipo. El SSD (especialmente en formato NVMe Gen 4) ofrece velocidades de lectura superiores a los 7.000 MB/s, frente a los 100–150 MB/s de un HDD convencional. <strong style="color:var(--text)">RAM y almacenamiento son complementarios e insustituibles entre sí.</strong></p>
       </div>
     </div>
 
@@ -800,7 +802,7 @@
     </div>
   </div>
   <div class="page-footer">
-    <div class="pf-text">GRUPO <span class="g">MAXIMUS</span> · CAPACITACIÓN INTERNA</div>
+    <div class="pf-text">GRUPO <span class="g">MAXIMUS</span> · CAPACITACIÓN INTERNA · RRHH L.C</div>
     <div class="pf-text">04</div>
   </div>
 </div>
@@ -881,7 +883,7 @@
     </div>
   </div>
   <div class="page-footer">
-    <div class="pf-text">GRUPO <span class="g">MAXIMUS</span> · CAPACITACIÓN INTERNA</div>
+    <div class="pf-text">GRUPO <span class="g">MAXIMUS</span> · CAPACITACIÓN INTERNA · RRHH L.C</div>
     <div class="pf-text">05</div>
   </div>
 </div>
@@ -918,22 +920,22 @@
     <div class="gama-visual">
       <div class="gama-row">
         <div class="gama-label">BAJA</div>
-        <div class="gama-bar-wrap"><div class="gama-bar" style="width:25%;background:linear-gradient(90deg,#1a2224,#242e30);">RX 6500 XT · GTX 1650 · Arc A380</div></div>
+        <div class="gama-bar-wrap"><div class="gama-bar" style="--bar-w:25%;--bar-bg:linear-gradient(90deg,#1a2224,#242e30);"><span>RX 6500 XT · GTX 1650 · Arc A380</span></div></div>
         <div class="gama-note">1080p casual</div>
       </div>
       <div class="gama-row">
         <div class="gama-label">MEDIA</div>
-        <div class="gama-bar-wrap"><div class="gama-bar" style="width:50%;background:linear-gradient(90deg,#0b2210,#0d2e14);">RX 7600 · RTX 4060 · Arc A770</div></div>
+        <div class="gama-bar-wrap"><div class="gama-bar" style="--bar-w:50%;--bar-bg:linear-gradient(90deg,#0b2210,#0d2e14);"><span>RX 7600 · RTX 4060 · Arc A770</span></div></div>
         <div class="gama-note" style="color:var(--green);">1080p gaming</div>
       </div>
       <div class="gama-row">
         <div class="gama-label">ALTA</div>
-        <div class="gama-bar-wrap"><div class="gama-bar" style="width:75%;background:linear-gradient(90deg,#173218,#1d4220);">RX 7800 XT · RTX 4070 · RTX 4070 Ti</div></div>
+        <div class="gama-bar-wrap"><div class="gama-bar" style="--bar-w:75%;--bar-bg:linear-gradient(90deg,#173218,#1d4220);"><span>RX 7800 XT · RTX 4070 · RTX 4070 Ti</span></div></div>
         <div class="gama-note" style="color:var(--yellow);">1440p gaming</div>
       </div>
       <div class="gama-row">
         <div class="gama-label">ULTRA</div>
-        <div class="gama-bar-wrap"><div class="gama-bar" style="width:100%;background:linear-gradient(90deg,#1e4520,#255528);">RX 7900 XTX · RTX 4080 · RTX 4090</div></div>
+        <div class="gama-bar-wrap"><div class="gama-bar" style="--bar-w:100%;--bar-bg:linear-gradient(90deg,#1e4520,#255528);"><span>RX 7900 XTX · RTX 4080 · RTX 4090</span></div></div>
         <div class="gama-note" style="color:#a8f0b8;">4K / Pro</div>
       </div>
     </div>
@@ -962,7 +964,7 @@
     </div>
   </div>
   <div class="page-footer">
-    <div class="pf-text">GRUPO <span class="g">MAXIMUS</span> · CAPACITACIÓN INTERNA</div>
+    <div class="pf-text">GRUPO <span class="g">MAXIMUS</span> · CAPACITACIÓN INTERNA · RRHH L.C</div>
     <div class="pf-text">06</div>
   </div>
 </div>
@@ -1041,7 +1043,7 @@
     </div>
   </div>
   <div class="page-footer">
-    <div class="pf-text">GRUPO <span class="g">MAXIMUS</span> · CAPACITACIÓN INTERNA</div>
+    <div class="pf-text">GRUPO <span class="g">MAXIMUS</span> · CAPACITACIÓN INTERNA · RRHH L.C</div>
     <div class="pf-text">07</div>
   </div>
 </div>
@@ -1117,7 +1119,7 @@
     </div>
   </div>
   <div class="page-footer">
-    <div class="pf-text">GRUPO <span class="g">MAXIMUS</span> · CAPACITACIÓN INTERNA</div>
+    <div class="pf-text">GRUPO <span class="g">MAXIMUS</span> · CAPACITACIÓN INTERNA · RRHH L.C</div>
     <div class="pf-text">08</div>
   </div>
 </div>
@@ -1181,7 +1183,7 @@
     </div>
   </div>
   <div class="page-footer">
-    <div class="pf-text">GRUPO <span class="g">MAXIMUS</span> · CAPACITACIÓN INTERNA · USO EXCLUSIVO EQUIPO DE VENTAS</div>
+    <div class="pf-text">GRUPO <span class="g">MAXIMUS</span> · CAPACITACIÓN INTERNA · USO EXCLUSIVO EQUIPO DE VENTAS · RRHH L.C</div>
     <div class="pf-text">09</div>
   </div>
 </div>
