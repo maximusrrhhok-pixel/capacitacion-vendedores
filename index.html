@@ -166,8 +166,8 @@
   .card-dim    { border-left:3px solid var(--text3); }
 
   /* concept pills */
-  .concepts { display:flex; flex-wrap:wrap; gap:9px; margin:13px 0; }
-  .concept { background:var(--surface); border:1px solid var(--border); border-radius:7px; padding:9px 13px; min-width:108px; }
+  .concepts { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin:13px 0; }
+  .concept { background:var(--surface); border:1px solid var(--border); border-radius:7px; padding:12px 15px; }
   .concept-key { font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--green); letter-spacing:1.5px; margin-bottom:2px; }
   .concept-val { font-family:'Rajdhani',sans-serif; font-size:15px; font-weight:700; color:var(--white); }
   .concept-desc { font-size:10px; color:var(--text3); margin-top:2px; line-height:1.4; }
@@ -374,6 +374,7 @@
     
     .card-grid-2,
     .card-grid-3 { grid-template-columns: 1fr; }
+    .concepts { grid-template-columns: 1fr 1fr; }
     
     .pc-diagram { grid-template-columns: repeat(2, 1fr); gap:7px; }
     
@@ -633,14 +634,15 @@
     <p class="section-desc">El corazón de cualquier PC. Entender sus características es fundamental para hacer la recomendación correcta.</p>
 
     <h2>¿Qué es un procesador?</h2>
-    <p>El procesador ejecuta todas las instrucciones de software. Cuanto más potente, más rápido responde el sistema. Sin embargo, la potencia necesaria depende completamente del uso.</p>
+    <p>El procesador es la unidad central de cómputo del sistema. Se encarga de interpretar y ejecutar cada instrucción de software, gestionando desde las operaciones más simples hasta los cálculos más complejos. Su rendimiento depende de una combinación de factores: frecuencia, cantidad de núcleos, caché y arquitectura. No siempre el procesador más caro es el más adecuado — la clave está en alinear las especificaciones con el uso real del cliente.</p>
 
     <div class="concepts">
-      <div class="concept"><div class="concept-key">FRECUENCIA</div><div class="concept-val">GHz</div><div class="concept-desc">Velocidad de ciclos. Mayor GHz = más rápido en tareas de un solo hilo.</div></div>
-      <div class="concept"><div class="concept-key">NÚCLEOS</div><div class="concept-val">Cores</div><div class="concept-desc">Cuántas tareas en paralelo. Más núcleos = mejor multitarea.</div></div>
-      <div class="concept"><div class="concept-key">HILOS</div><div class="concept-val">Threads</div><div class="concept-desc">Virtualizaciones de núcleos. Mejoran la distribución de la carga.</div></div>
-      <div class="concept"><div class="concept-key">CACHÉ</div><div class="concept-val">MB L3</div><div class="concept-desc">Memoria interna del CPU. Mayor caché = menor latencia.</div></div>
-      <div class="concept"><div class="concept-key">TDP</div><div class="concept-val">Watts</div><div class="concept-desc">Consumo y calor generado. Define cooler y fuente necesarios.</div></div>
+      <div class="concept"><div class="concept-key">FRECUENCIA</div><div class="concept-val">GHz</div><div class="concept-desc">Velocidad de ejecución por ciclo de reloj. A mayor GHz, más instrucciones procesa por segundo en un mismo núcleo. Clave en gaming y aplicaciones de un solo hilo.</div></div>
+      <div class="concept"><div class="concept-key">NÚCLEOS</div><div class="concept-val">Cores</div><div class="concept-desc">Unidades de procesamiento independientes dentro del mismo chip. Más núcleos permiten ejecutar múltiples tareas en paralelo sin que una afecte a la otra.</div></div>
+      <div class="concept"><div class="concept-key">HILOS</div><div class="concept-val">Threads</div><div class="concept-desc">Virtualizaciones lógicas de cada núcleo físico. Permiten distribuir mejor la carga de trabajo, mejorando la eficiencia en tareas de edición, renderizado y multitarea.</div></div>
+      <div class="concept"><div class="concept-key">CACHÉ</div><div class="concept-val">MB L3</div><div class="concept-desc">Memoria ultrarrápida integrada en el procesador. Almacena datos de uso frecuente para reducir los tiempos de acceso a RAM. Mayor caché implica menor latencia en operaciones repetitivas.</div></div>
+      <div class="concept"><div class="concept-key">TDP</div><div class="concept-val">Watts</div><div class="concept-desc">Thermal Design Power: indica el calor máximo que genera el procesador bajo carga sostenida. Define el cooler necesario y el margen mínimo de watts recomendado en la fuente.</div></div>
+      <div class="concept"><div class="concept-key">ARQUITECTURA</div><div class="concept-val">Generación</div><div class="concept-desc">Define el diseño interno del procesador y su fabricación en nanómetros. Arquitecturas más nuevas (Zen 5, Arrow Lake) ofrecen mejor eficiencia energética y mayor rendimiento por núcleo.</div></div>
     </div>
 
     <div class="info-banner">
