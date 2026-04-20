@@ -122,7 +122,7 @@
 
   /* ── CONTENT PAGES ── */
   .content-page {
-    width:210mm; min-height:297mm; background:var(--bg2); scroll-margin-top:52px;
+    width:210mm; min-height:297mm; background:var(--bg2); scroll-margin-top:80px;
     display:flex; flex-direction:column;
     page-break-before:always; position:relative;
   }
@@ -356,12 +356,13 @@
     /* Navigation bar for fullscreen */
     #nav-bar {
       position: sticky; top: 0; z-index: 100;
-      background: rgba(7,8,9,0.95);
+      background: rgba(7,8,9,0.97);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border2);
       padding: 10px 20px;
       display: flex; align-items: center; justify-content: space-between;
       gap: 12px;
+      height: 44px;
     }
     #nav-logo { display:flex; align-items:center; gap:10px; }
     #nav-title { font-family:'Roboto Condensed',sans-serif; font-weight:700; font-size:14px; letter-spacing:2px; color:var(--text2); }
@@ -384,9 +385,10 @@
 
     /* ── PROGRESS BAR ── */
     #progress-bar-wrap {
-      position: sticky; top: 45px; z-index: 99;
-      background: var(--bg3);
-      border-bottom: 1px solid var(--border);
+      position: sticky; top: 44px; z-index: 99;
+      background: rgba(7,8,9,0.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border2);
       padding: 6px 20px 7px;
       display: flex; align-items: center; gap: 12px;
     }
